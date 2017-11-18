@@ -15,7 +15,7 @@ import struct
 from asciinema.term import raw
 
 
-class PtyRecorder:
+class PtyRecorder(object):
 
     def record_command(self, command, output, env=os.environ):
         master_fd = None

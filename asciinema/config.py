@@ -13,7 +13,7 @@ DEFAULT_API_URL = 'https://asciinema.org'
 DEFAULT_RECORD_ENV = 'SHELL,TERM'
 
 
-class Config:
+class Config(object):
 
     def __init__(self, config, env=None):
         self.config = config

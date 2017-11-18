@@ -6,7 +6,7 @@ import asciinema.asciicast.frames as frames
 from asciinema.term import raw, read_non_blocking
 
 
-class Player:
+class Player(object):
 
     def play(self, asciicast, idle_time_limit=None, speed=1.0):
         if os.isatty(sys.stdin.fileno()):

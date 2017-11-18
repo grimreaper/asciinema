@@ -11,7 +11,7 @@ class APIError(Exception):
     pass
 
 
-class Api:
+class Api(object):
 
     def __init__(self, url, user, token, http_adapter=None):
         self.url = url

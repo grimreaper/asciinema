@@ -3,7 +3,7 @@ import select
 import os
 
 
-class raw():
+class raw(object):
     def __init__(self, fd):
         self.fd = fd
         self.restore = False

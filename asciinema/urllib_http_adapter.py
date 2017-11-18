@@ -9,7 +9,7 @@ from urllib.error import HTTPError, URLError
 from .http_adapter import HTTPConnectionError
 
 
-class MultipartFormdataEncoder:
+class MultipartFormdataEncoder(object):
     def __init__(self):
         self.boundary = uuid.uuid4().hex
         self.content_type = 'multipart/form-data; boundary={}'.format(self.boundary)
@@ -56,7 +56,7 @@ class MultipartFormdataEncoder:
         return self.content_type, body.getvalue()
 
 
-class URLLibHttpAdapter:
+class URLLibHttpAdapter(object):
 
     def post(self, url, fields={}, files={}, headers={}, username=None, password=None):
         content_type, body = MultipartFormdataEncoder().encode(fields, files)
